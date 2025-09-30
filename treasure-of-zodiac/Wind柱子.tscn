@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdbp2b0fljsg5"]
+
+[ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="1_wihx0"]
+[ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="2_hx8ji"]
+
+[node name="Node" type="Node"]
+
+[node name="Circle" type="CharacterBody2D" parent="."]
+position = Vector2(856, 303)
+script = ExtResource("1_wihx0")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="Circle"]
+position = Vector2(1, 0.9999999)
+scale = Vector2(0.8982301, 0.93564355)
+texture = ExtResource("2_hx8ji")
