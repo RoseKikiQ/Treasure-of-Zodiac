@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpek3vuaa0omm"]
+
+[ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="1_54g15"]
+[ext_resource type="Texture2D" uid="uid://du1mn36onl7sp" path="res://Treasure hunt.jpg" id="1_ffphx"]
+[ext_resource type="Script" uid="uid://6smflucpid0d" path="res://button.gd" id="1_w1jhh"]
+[ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="2_w1jhh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ffphx"]
+radius = 16.0
+
+[node name="Node" type="Node"]
+
+[node name="TreasureHunt" type="Sprite2D" parent="."]
+position = Vector2(548.75006, 324)
+scale = Vector2(1.2045001, 1.1080618)
+texture = ExtResource("1_ffphx")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 434.0
+offset_top = 543.0
+offset_right = 717.0
+offset_bottom = 589.0
+text = "Press To Start the Treasure Hunt"
+script = ExtResource("1_w1jhh")
+
+[node name="Circle" type="CharacterBody2D" parent="."]
+position = Vector2(578, 325)
+script = ExtResource("1_54g15")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="Circle"]
+position = Vector2(1.9073486e-05, -1.1920929e-07)
+scale = Vector2(0.31402102, 0.33369434)
+texture = ExtResource("2_w1jhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
+shape = SubResource("CircleShape2D_ffphx")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
