@@ -1,25 +1,26 @@
-[gd_scene load_steps=24 format=3 uid="uid://dx5ty6majsqjk"]
+[gd_scene load_steps=26 format=3 uid="uid://dx5ty6majsqjk"]
 
 [ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="1_51mie"]
 [ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="1_bacrs"]
 [ext_resource type="Texture2D" uid="uid://big2schte2lsp" path="res://MainMaze3.png" id="3_tf60k"]
 [ext_resource type="Texture2D" uid="uid://c5cawidy5i730" path="res://Earth symbol.png" id="4_u0dg4"]
-[ext_resource type="Texture2D" uid="uid://bx2w8ketwehae" path="res://金牛 土.png" id="5_tbfso"]
 [ext_resource type="Texture2D" uid="uid://b6o3owrge2co1" path="res://Water Symbol.png" id="5_vmo2m"]
-[ext_resource type="Texture2D" uid="uid://b8j7wrg5lyoqi" path="res://处女 土.png" id="6_lwmap"]
 [ext_resource type="Texture2D" uid="uid://dk1adtyw7ne6y" path="res://Wind Symbol.png" id="6_s0y0m"]
 [ext_resource type="Texture2D" uid="uid://clk46te3qprfk" path="res://Fire Symbol.png" id="7_n6rdf"]
-[ext_resource type="Texture2D" uid="uid://cdhvgqi6i6a6x" path="res://摩羯 土.png" id="7_p4uu3"]
 [ext_resource type="Script" uid="uid://ci2vy7cggj36j" path="res://Water.gd" id="8_lwmap"]
-[ext_resource type="Texture2D" uid="uid://bo0yhquukgbxc" path="res://天蝎 水.png" id="10_tbfso"]
-[ext_resource type="Texture2D" uid="uid://djesxvpy53tse" path="res://巨蟹.png" id="11_4ruus"]
-[ext_resource type="Texture2D" uid="uid://8wo3xvs77md2" path="res://双鱼 水.png" id="11_6r4m6"]
-[ext_resource type="Texture2D" uid="uid://wcp6vn6be50e" path="res://双子 风.png" id="13_o5oht"]
-[ext_resource type="Texture2D" uid="uid://div7q2jqj02g7" path="res://天平.png" id="14_5ynfy"]
-[ext_resource type="Texture2D" uid="uid://jikbknft4tne" path="res://水瓶 风.png" id="15_5ynfy"]
-[ext_resource type="Texture2D" uid="uid://cl734qfg52ivw" path="res://射手 火.png" id="16_tbfso"]
-[ext_resource type="Texture2D" uid="uid://ccaepec5y2mhc" path="res://白羊 火.png" id="17_df0i0"]
-[ext_resource type="Texture2D" uid="uid://cf1ma7pv2xhgj" path="res://狮子 火.png" id="18_tbfso"]
+[ext_resource type="Script" uid="uid://cc3ys6opkgc5c" path="res://arieskey.gd" id="8_p4uu3"]
+[ext_resource type="Texture2D" uid="uid://hibuf4cdlqs4" path="res://Taurus .png" id="9_lwmap"]
+[ext_resource type="Texture2D" uid="uid://cujnkuwkqj1d2" path="res://Virgo.png" id="10_p4uu3"]
+[ext_resource type="Texture2D" uid="uid://ox3dvvv0qi5r" path="res://Aries.png" id="11_4ruus"]
+[ext_resource type="Texture2D" uid="uid://bvjjprghxh85i" path="res://Sagittarius.png" id="12_6r4m6"]
+[ext_resource type="Texture2D" uid="uid://cf4u3w4h7ign5" path="res://Leo.png" id="13_lwmap"]
+[ext_resource type="Texture2D" uid="uid://bvwd351q7prng" path="res://Aquarius.png" id="14_o5oht"]
+[ext_resource type="Texture2D" uid="uid://de14a5mfajj8o" path="res://Libra.png" id="15_5ynfy"]
+[ext_resource type="Texture2D" uid="uid://b5vbcxieyj5ob" path="res://Gemini.png" id="16_df0i0"]
+[ext_resource type="Texture2D" uid="uid://br6k4hg6nw58n" path="res://Capricorn.png" id="17_m3u5k"]
+[ext_resource type="Texture2D" uid="uid://dbqq20oumc2ab" path="res://Cancer.png" id="18_kvc7b"]
+[ext_resource type="Texture2D" uid="uid://c7q7q3dl0v07y" path="res://Scorpio.png" id="19_ixgtn"]
+[ext_resource type="Texture2D" uid="uid://fdors1n1wqds" path="res://Pisces.png" id="20_cvt5i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tf60k"]
 radius = 16.0
@@ -30,6 +31,10 @@ radius = 16.0
 radius = 38.378174
 height = 76.75635
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ruus"]
+radius = 393.75
+height = 787.5
+
 [node name="Node" type="Node"]
 
 [node name="MainMaze3" type="Sprite2D" parent="."]
@@ -38,7 +43,7 @@ scale = Vector2(1.0743182, 1.0847999)
 texture = ExtResource("3_tf60k")
 
 [node name="Circle" type="CharacterBody2D" parent="."]
-position = Vector2(607, 331)
+position = Vector2(1074, 341)
 scale = Vector2(1.0000001, 1)
 collision_layer = 2
 script = ExtResource("1_bacrs")
@@ -68,22 +73,13 @@ collision_layer = 3
 collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_tf60k")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-build_mode = 1
-polygon = PackedVector2Array(11, 8, 279, 8, 279, 161, 289, 161, 289, 8, 402, 8, 402, 74, 411, 74, 411, 8, 587, 8, 587, 30, 596, 30, 596, 8, 711, 8, 711, 30, 719, 30, 719, 8, 864, 8, 864, 29, 872, 29, 872, 8, 987, 8, 987, 52, 996, 52, 996, 8, 1141, 8, 1141, 134, 1111, 134, 1111, 140, 1141, 140, 1141, 222, 1111, 222, 1111, 228, 1141, 228, 1141, 311, 1111, 311, 1111, 316, 1141, 316, 1141, 354, 1111, 354, 1111, 360, 1141, 360, 1141, 641, 749, 641, 749, 554, 740, 554, 740, 641, 626, 641, 626, 555, 619, 555, 619, 641, 503, 641, 503, 471, 656, 471, 656, 464, 302, 464, 302, 471, 372, 471, 372, 491, 381, 491, 381, 471, 494, 471, 494, 641, 381, 641, 381, 581, 434, 581, 434, 602, 442, 602, 442, 509, 434, 509, 434, 530, 319, 530, 319, 509, 65, 509, 65, 601, 72, 601, 72, 515, 188, 515, 188, 602, 196, 602, 196, 515, 312, 515, 312, 601, 319, 601, 319, 537, 434, 537, 434, 575, 373, 575, 372, 641, 258, 641, 258, 553, 249, 553, 249, 641, 135, 641, 135, 554, 127, 554, 127, 641, 11, 641, 11, 426, 134, 426, 134, 420, 11, 420, 11, 250, 157, 250, 157, 294, 165, 294, 165, 206, 257, 206, 257, 200, 196, 200, 196, 162, 227, 162, 227, 45, 64, 45, 64, 74, 73, 74, 73, 52, 219, 52, 219, 156, 187, 156, 187, 200, 135, 200, 135, 118, 165, 118, 165, 90, 158, 90, 158, 111, 127, 111, 127, 206, 157, 206, 157, 244, 11, 244, 11, 118, 64, 118, 64, 205, 73, 205, 73, 112, 11, 112)
-
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
 build_mode = 1
 polygon = PackedVector2Array(350, 46, 350, 111, 381, 111, 381, 118, 350, 118, 350, 222, 495, 222, 495, 158, 503, 158, 503, 222, 618, 222, 618, 74, 526, 74, 526, 52, 473, 52, 473, 112, 565, 112, 565, 183, 557, 183, 557, 118, 442, 118, 442, 184, 402, 184, 402, 178, 434, 178, 434, 112, 464, 112, 464, 45, 534, 45, 534, 67, 649, 67, 649, 47, 655, 47, 655, 67, 718, 67, 718, 74, 626, 74, 626, 156, 748, 156, 748, 183, 741, 183, 741, 162, 626, 162, 626, 222, 679, 222, 679, 201, 688, 201, 688, 222, 803, 222, 803, 118, 679, 118, 679, 111, 811, 111, 811, 222, 926, 222, 926, 133, 995, 133, 995, 140, 933, 140, 933, 222, 995, 222, 995, 229, 841, 229, 841, 254, 833, 254, 833, 229, 319, 230, 319, 250, 257, 250, 257, 464, 267, 464, 267, 471, 64, 471, 64, 464, 187, 464, 187, 383, 65, 383, 65, 377, 187, 377, 187, 338, 66, 338, 66, 332, 96, 332, 96, 294, 66, 294, 66, 288, 103, 288, 103, 332, 196, 332, 196, 464, 248, 464, 248, 294, 220, 294, 220, 288, 248, 288, 248, 250, 219, 250, 219, 243, 312, 244, 312, 222, 341, 222, 341, 46)
 
-[node name="EarthSymbol" type="Sprite2D" parent="."]
-position = Vector2(164.10095, 357)
-scale = Vector2(0.5024036, 0.44557908)
-texture = ExtResource("4_u0dg4")
-
-[node name="Area2D" type="Area2D" parent="."]
+[node name="WaterEnter" type="Area2D" parent="."]
 position = Vector2(588.8582, 536)
 scale = Vector2(0.4897648, 0.46901584)
 disable_mode = 1
@@ -92,83 +88,98 @@ collision_mask = 2
 script = ExtResource("8_lwmap")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterEnter"]
 position = Vector2(0.28955078, 0)
 shape = SubResource("CapsuleShape2D_lwmap")
 
-[node name="WaterSymbol" type="Sprite2D" parent="Area2D"]
+[node name="WaterSymbol" type="Sprite2D" parent="WaterEnter"]
 position = Vector2(0.28955078, 0)
 texture = ExtResource("5_vmo2m")
 
+[node name="Taurus" type="Sprite2D" parent="."]
+position = Vector2(936, 578)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("9_lwmap")
+
+[node name="Virgo" type="Sprite2D" parent="."]
+position = Vector2(909.45374, 380)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("10_p4uu3")
+
+[node name="AriesKey" type="Area2D" parent="."]
+position = Vector2(1123.25, 335)
+scale = Vector2(0.04, 0.04)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("8_p4uu3")
+metadata/_edit_group_ = true
+
+[node name="Aries" type="Sprite2D" parent="AriesKey"]
+texture = ExtResource("11_4ruus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AriesKey"]
+shape = SubResource("CapsuleShape2D_4ruus")
+
+[node name="Sagittarius" type="Sprite2D" parent="."]
+position = Vector2(30.25, 622.0001)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("12_6r4m6")
+
+[node name="Leo" type="Sprite2D" parent="."]
+position = Vector2(226.99991, 444)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("13_lwmap")
+
+[node name="Aquarius" type="Sprite2D" parent="."]
+position = Vector2(1064, 71)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("14_o5oht")
+
+[node name="Libra" type="Sprite2D" parent="."]
+position = Vector2(597, 622)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("15_5ynfy")
+
+[node name="Gemini" type="Sprite2D" parent="."]
+position = Vector2(164.99994, 181.99998)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("16_df0i0")
+
+[node name="Capricorn" type="Sprite2D" parent="."]
+position = Vector2(500, 67)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("17_m3u5k")
+
+[node name="Cancer" type="Sprite2D" parent="."]
+position = Vector2(651.80554, 204.50421)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("18_kvc7b")
+
+[node name="Scorpio" type="Sprite2D" parent="."]
+position = Vector2(417.14178, 556.00006)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("19_ixgtn")
+
+[node name="Pisces" type="Sprite2D" parent="."]
+position = Vector2(39.141724, 135.99995)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("20_cvt5i")
+
 [node name="WindSymbol" type="Sprite2D" parent="."]
-position = Vector2(962.8669, 337)
-scale = Vector2(0.46667093, 0.44245803)
+position = Vector2(962.86694, 337)
+scale = Vector2(0.466671, 0.44245806)
 texture = ExtResource("6_s0y0m")
 
 [node name="FireSymbol" type="Sprite2D" parent="."]
-position = Vector2(601.00006, 93)
-scale = Vector2(0.52442044, 0.50219476)
+position = Vector2(599.00006, 92.99997)
+scale = Vector2(0.52442044, 0.5021948)
 texture = ExtResource("7_n6rdf")
 
-[node name="金牛 土" type="Sprite2D" parent="."]
-position = Vector2(936, 578)
-scale = Vector2(0.03749995, 0.038022775)
-texture = ExtResource("5_tbfso")
+[node name="EarthSymbol" type="Sprite2D" parent="."]
+position = Vector2(164.10092, 357)
+scale = Vector2(0.5024037, 0.44557908)
+texture = ExtResource("4_u0dg4")
 
-[node name="处女 土" type="Sprite2D" parent="."]
-position = Vector2(909.45374, 380)
-scale = Vector2(0.03673131, 0.035646327)
-texture = ExtResource("6_lwmap")
-
-[node name="白羊 火" type="Sprite2D" parent="."]
-position = Vector2(1124.25, 333.99997)
-scale = Vector2(0.037013028, 0.037179466)
-texture = ExtResource("17_df0i0")
-
-[node name="射手 火" type="Sprite2D" parent="."]
-position = Vector2(29.25, 624.0001)
-scale = Vector2(0.03801548, 0.039490446)
-texture = ExtResource("16_tbfso")
-
-[node name="狮子 火" type="Sprite2D" parent="."]
-position = Vector2(226.99991, 444)
-scale = Vector2(0.036622915, 0.036601588)
-texture = ExtResource("18_tbfso")
-
-[node name="水瓶 风" type="Sprite2D" parent="."]
-position = Vector2(1061.75, 70.99997)
-scale = Vector2(0.040281184, 0.04070141)
-texture = ExtResource("15_5ynfy")
-
-[node name="天平 风" type="Sprite2D" parent="."]
-position = Vector2(597, 622)
-scale = Vector2(0.038705666, 0.03989021)
-texture = ExtResource("14_5ynfy")
-
-[node name="双子 风" type="Sprite2D" parent="."]
-position = Vector2(164.99994, 181.99998)
-scale = Vector2(0.0421456, 0.041290347)
-texture = ExtResource("13_o5oht")
-
-[node name="摩羯 土" type="Sprite2D" parent="."]
-position = Vector2(500, 67)
-scale = Vector2(0.038510762, 0.038216572)
-texture = ExtResource("7_p4uu3")
-
-[node name="巨蟹 水" type="Sprite2D" parent="."]
-position = Vector2(651.80554, 204.50421)
-scale = Vector2(0.0383406, 0.038760632)
-texture = ExtResource("11_4ruus")
-
-[node name="天蝎 水" type="Sprite2D" parent="."]
-position = Vector2(417.14178, 556.00006)
-scale = Vector2(0.038022783, 0.038515605)
-texture = ExtResource("10_tbfso")
-
-[node name="双鱼 水" type="Sprite2D" parent="."]
-position = Vector2(39.141724, 133.99997)
-scale = Vector2(0.04166658, 0.041774612)
-texture = ExtResource("11_6r4m6")
-
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="WaterEnter" to="WaterEnter" method="_on_body_entered"]
+[connection signal="body_exited" from="WaterEnter" to="WaterEnter" method="_on_body_exited"]
+[connection signal="body_entered" from="AriesKey" to="AriesKey" method="_on_body_entered"]
