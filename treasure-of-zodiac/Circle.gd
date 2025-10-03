@@ -1,8 +1,11 @@
-extends CharacterBody2D
+class_name Circle extends CharacterBody2D
 @export var is_final = false
 var triggered = false
 const b = 24
+
 var KeyA1_collected = false
+var KeyA2_collected = false
+
 func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	if not triggered:

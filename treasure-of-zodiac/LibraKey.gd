@@ -1,5 +1,6 @@
 extends Area2D
-@export var level: int
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.name=="Circle":
-		get_tree().change_scene_to_file("res://Main_Maze.tscn")
+		body.KeyA2_collected = true
+		queue_free()

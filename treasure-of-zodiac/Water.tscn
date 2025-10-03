@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://ka6v0o0lfduc"]
+[gd_scene load_steps=14 format=3 uid="uid://ka6v0o0lfduc"]
 
+[ext_resource type="Script" uid="uid://43ov3ccvqua8" path="res://waterpillar.gd" id="1_c61om"]
 [ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="2_w8oig"]
-[ext_resource type="Script" uid="uid://cwoq3xnx6j41" path="res://ariescoin.gd" id="3_3ajnt"]
 [ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="3_qsqs7"]
 [ext_resource type="Texture2D" uid="uid://coaq12jcro4pt" path="res://lattice.png" id="4_qsqs7"]
 [ext_resource type="Texture2D" uid="uid://chv3wfj5tlvs5" path="res://222.png" id="4_w8oig"]
 [ext_resource type="Texture2D" uid="uid://ox3dvvv0qi5r" path="res://Aries.png" id="5_fwyoe"]
 [ext_resource type="Texture2D" uid="uid://b6o3owrge2co1" path="res://Water Symbol.png" id="5_qsqs7"]
+[ext_resource type="Script" uid="uid://db0rksyx15vd1" path="res://aries_area_2d.gd" id="5_r6ybo"]
 [ext_resource type="Script" uid="uid://bmq68h0s24f5x" path="res://WaterExit.gd" id="7_c61om"]
+[ext_resource type="Texture2D" uid="uid://ijmwpkil0mal" path="res://icon.svg" id="10_r6ybo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r6ybo"]
 radius = 28.24768
@@ -20,9 +22,10 @@ radius = 39.0
 height = 78.0
 
 [node name="Node" type="Node"]
+script = ExtResource("1_c61om")
 
 [node name="222" type="Sprite2D" parent="."]
-position = Vector2(359.49997, 204.24998)
+position = Vector2(360.00003, 202)
 scale = Vector2(0.3282028, 0.39740202)
 texture = ExtResource("4_w8oig")
 
@@ -31,24 +34,25 @@ position = Vector2(939, 326)
 scale = Vector2(2.194871, 2.0868168)
 texture = ExtResource("4_qsqs7")
 
-[node name="AriesCoin" type="Area2D" parent="."]
-position = Vector2(801, 72)
-scale = Vector2(2.194871, 2.0868168)
-script = ExtResource("3_3ajnt")
-metadata/_edit_group_ = true
-
-[node name="Aries" type="Sprite2D" parent="AriesCoin"]
-position = Vector2(-1.2529068, 4.2528887)
-scale = Vector2(0.071891375, 0.0735693)
+[node name="Aries" type="Sprite2D" parent="."]
+position = Vector2(798.00006, 82.00001)
+scale = Vector2(0.15779229, 0.15352565)
 texture = ExtResource("5_fwyoe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AriesCoin"]
-position = Vector2(-0.45560765, 4.312789)
-shape = SubResource("CircleShape2D_r6ybo")
-
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(943, 90)
+[node name="AriesCoin" type="Area2D" parent="."]
+position = Vector2(799, 84)
 scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("5_r6ybo")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="AriesCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("10_r6ybo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AriesCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
 
 [node name="Circle" type="CharacterBody2D" parent="."]
 position = Vector2(673, 606)
@@ -78,6 +82,5 @@ texture = ExtResource("5_qsqs7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterExit"]
 shape = SubResource("CapsuleShape2D_of471")
 
-[connection signal="visibility_changed" from="AriesCoin" to="AriesCoin" method="_on_visibility_changed"]
 [connection signal="body_entered" from="WaterExit" to="WaterExit" method="_on_body_entered"]
 [connection signal="body_exited" from="WaterExit" to="WaterExit" method="_on_body_exited"]
