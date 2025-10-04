@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj5pcs7nathbu"]
+
+[ext_resource type="Script" uid="uid://dl3oqt8nll3xo" path="res://AriesDrag.gd" id="1_os7f0"]
+[ext_resource type="Texture2D" uid="uid://ox3dvvv0qi5r" path="res://Aries.png" id="2_my4jx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qxb4v"]
+radius = 383.54663
+
+[node name="AriesDrag" type="Node2D"]
+script = ExtResource("1_os7f0")
+
+[node name="Aries" type="Sprite2D" parent="."]
+position = Vector2(798, 94)
+scale = Vector2(0.15568188, 0.15248397)
+texture = ExtResource("2_my4jx")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(799, 93)
+scale = Vector2(0.15568188, 0.15248397)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qxb4v")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

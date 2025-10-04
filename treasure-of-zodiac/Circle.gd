@@ -16,6 +16,7 @@ var KeyD1_collected = false
 var KeyD2_collected = false
 var KeyD3_collected = false
 
+
 func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	if not triggered:
