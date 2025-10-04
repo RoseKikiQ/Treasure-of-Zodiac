@@ -1,15 +1,15 @@
 extends Area2D
 
-@export var item_id: String = "KeyC2"
+@export var item_id: String = "KeyD2"
 
 func _ready():
 	var scene_name = get_tree().current_scene.name
 	if GameState.is_collected(scene_name, item_id):
 		queue_free()
-		
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.name=="Circle":
-		body.KeyC2_collected = true
+		body.KeyD2_collected = true
 		var scene_name = get_tree().current_scene.name
 		GameState.mark_collected(scene_name, item_id)
 		queue_free()
