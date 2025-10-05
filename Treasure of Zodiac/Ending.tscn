@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwvo8mmsyoe08"]
+
+[ext_resource type="Texture2D" uid="uid://dmc111rh4qvbc" path="res://istockphoto-483955929-612x612.jpg" id="1_yqk5q"]
+[ext_resource type="Script" uid="uid://c17ta07n5rcw0" path="res://Endingbutton.gd" id="2_jkr2r"]
+
+[node name="Istockphoto483955929612x612" type="Sprite2D"]
+position = Vector2(576.5, 322.5)
+scale = Vector2(1.887255, 1.5759803)
+texture = ExtResource("1_yqk5q")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+offset_left = -298.58182
+offset_top = 146.8927
+offset_right = -143.58182
+offset_bottom = 200.8927
+text = "The End!
+Thanks for playing!"
+script = ExtResource("2_jkr2r")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

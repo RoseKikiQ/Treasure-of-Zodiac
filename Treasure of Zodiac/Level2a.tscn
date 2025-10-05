@@ -1,16 +1,13 @@
-[gd_scene load_steps=42 format=3 uid="uid://ka6v0o0lfduc"]
+[gd_scene load_steps=40 format=3 uid="uid://ct7hyiq5ugk88"]
 
-[ext_resource type="Texture2D" uid="uid://b7jydrrhjrxb7" path="res://WindPillar.png" id="2_1feth"]
 [ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="2_w8oig"]
-[ext_resource type="Texture2D" uid="uid://dntfr3yq1ng4a" path="res://EarthPillar.png" id="3_g5heh"]
-[ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="3_qsqs7"]
-[ext_resource type="Texture2D" uid="uid://cv1ikss38cv8o" path="res://FirePillar.png" id="4_i3xbm"]
+[ext_resource type="Texture2D" uid="uid://byfebn147gaqy" path="res://pirate-face-emoji.png" id="3_fm5p6"]
 [ext_resource type="Texture2D" uid="uid://coaq12jcro4pt" path="res://lattice.png" id="4_qsqs7"]
+[ext_resource type="Texture2D" uid="uid://diyjvj0o448fe" path="res://123.jpg" id="5_1feth"]
 [ext_resource type="Texture2D" uid="uid://ox3dvvv0qi5r" path="res://Aries.png" id="5_fwyoe"]
 [ext_resource type="Script" uid="uid://db0rksyx15vd1" path="res://Aries_Area_2D.gd" id="5_r6ybo"]
 [ext_resource type="PackedScene" uid="uid://cj8cm51e2807c" path="res://scene_trigger.tscn" id="7_3ajnt"]
 [ext_resource type="Script" uid="uid://dl3oqt8nll3xo" path="res://AriesDrag.gd" id="7_21gp0"]
-[ext_resource type="Texture2D" uid="uid://diyjvj0o448fe" path="res://123.jpg" id="9_bppj0"]
 [ext_resource type="Texture2D" uid="uid://de14a5mfajj8o" path="res://Libra.png" id="9_r6ybo"]
 [ext_resource type="Script" uid="uid://cbd5w68gy8656" path="res://Libra_Area_2D.gd" id="10_of471"]
 [ext_resource type="Texture2D" uid="uid://ijmwpkil0mal" path="res://icon.svg" id="10_r6ybo"]
@@ -35,129 +32,21 @@
 [ext_resource type="Script" uid="uid://d0ap5wrju101q" path="res://Aquarius_Area_2D.gd" id="29_1feth"]
 [ext_resource type="Texture2D" uid="uid://fdors1n1wqds" path="res://Pisces.png" id="30_g5heh"]
 [ext_resource type="Script" uid="uid://dbek7ai71d41u" path="res://Pisces_Area_2D.gd" id="31_i3xbm"]
-[ext_resource type="Texture2D" uid="uid://bb77govj6murq" path="res://Block 2025-10-03 232928.png" id="36_7t2tf"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_bppj0"]
-radius = 11.0
+[ext_resource type="Texture2D" uid="uid://b7jydrrhjrxb7" path="res://WindPillar.png" id="33_g5heh"]
+[ext_resource type="Texture2D" uid="uid://dntfr3yq1ng4a" path="res://EarthPillar.png" id="34_i3xbm"]
+[ext_resource type="Texture2D" uid="uid://cv1ikss38cv8o" path="res://FirePillar.png" id="35_7t2tf"]
+[ext_resource type="Texture2D" uid="uid://bb77govj6murq" path="res://Block 2025-10-03 232928.png" id="36_koiu5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fwyoe"]
 radius = 36.01388
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c61om"]
-radius = 34.0
-height = 80.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lcjo"]
+size = Vector2(74, 73)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r6ybo"]
 radius = 28.24768
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_koiu5"]
-size = Vector2(471.5257, 279.84946)
-
 [node name="Node" type="Node"]
-
-[node name="WaterPillar" type="Sprite2D" parent="."]
-position = Vector2(123.125015, 279.26563)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("13_ag0fs")
-
-[node name="WindPillar" type="Sprite2D" parent="."]
-position = Vector2(297, 279)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_1feth")
-
-[node name="EarthPillar" type="Sprite2D" parent="."]
-position = Vector2(469, 280)
-scale = Vector2(0.253, 0.25)
-texture = ExtResource("3_g5heh")
-
-[node name="FirePillar" type="Sprite2D" parent="."]
-position = Vector2(640, 279)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("4_i3xbm")
-
-[node name="WaterHole" type="Area2D" parent="."]
-position = Vector2(123, 184)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterHole"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="WaterHole2" type="Area2D" parent="."]
-position = Vector2(123, 234)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterHole2"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="WaterHole3" type="Area2D" parent="."]
-position = Vector2(124, 286)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterHole3"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="WindHole" type="Area2D" parent="."]
-position = Vector2(298, 185)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WindHole"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="WindHole2" type="Area2D" parent="."]
-position = Vector2(298, 233)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WindHole2"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="WindHole3" type="Area2D" parent="."]
-position = Vector2(298, 282)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WindHole3"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="EarthHole" type="Area2D" parent="."]
-position = Vector2(471, 185)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EarthHole"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="EarthHole2" type="Area2D" parent="."]
-position = Vector2(471, 235)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EarthHole2"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="EarthHole3" type="Area2D" parent="."]
-position = Vector2(470, 285)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EarthHole3"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="FireHole" type="Area2D" parent="."]
-position = Vector2(642, 185)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FireHole"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="FireHole2" type="Area2D" parent="."]
-position = Vector2(642, 234)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FireHole2"]
-shape = SubResource("CircleShape2D_bppj0")
-
-[node name="FireHole3" type="Area2D" parent="."]
-position = Vector2(642, 284)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FireHole3"]
-shape = SubResource("CircleShape2D_bppj0")
 
 [node name="Bag" type="Sprite2D" parent="."]
 position = Vector2(939, 326)
@@ -172,26 +61,27 @@ script = ExtResource("2_w8oig")
 metadata/_edit_group_ = true
 
 [node name="Icon" type="Sprite2D" parent="Circle"]
-position = Vector2(-1.847744e-06, 1.0000114)
-scale = Vector2(0.7233821, 0.7312034)
-texture = ExtResource("3_qsqs7")
+position = Vector2(-0.49999058, 2.0000126)
+scale = Vector2(0.26335865, 0.26819918)
+texture = ExtResource("3_fm5p6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_fwyoe")
 
 [node name="SceneTrigger" parent="." instance=ExtResource("7_3ajnt")]
-position = Vector2(44, 606)
+position = Vector2(41, 604)
 connect_scene = "Main_Maze"
 metadata/_edit_group_ = true
 
-[node name="Exit" type="Sprite2D" parent="SceneTrigger"]
-position = Vector2(0.99999523, -2.4999783)
-scale = Vector2(0.079335794, 0.08397681)
-texture = ExtResource("9_bppj0")
+[node name="WaterSymbol" type="Sprite2D" parent="SceneTrigger"]
+position = Vector2(4, -1)
+scale = Vector2(0.07333946, 0.07673744)
+texture = ExtResource("5_1feth")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
-shape = SubResource("CapsuleShape2D_c61om")
+position = Vector2(4, -0.5)
+shape = SubResource("RectangleShape2D_4lcjo")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 3
@@ -203,13 +93,13 @@ scale = Vector2(1, 0.92257917)
 build_mode = 1
 polygon = PackedVector2Array(0, 554, 725, 554, 725, 647, -0.99999994, 647.9748)
 
-[node name="Aries2" type="Sprite2D" parent="."]
-position = Vector2(799, 85)
+[node name="Aries" type="Sprite2D" parent="."]
+position = Vector2(799, 82)
 scale = Vector2(0.15568188, 0.15248397)
 texture = ExtResource("5_fwyoe")
 
 [node name="AriesCoin" type="Area2D" parent="."]
-position = Vector2(799, 83)
+position = Vector2(797, 81)
 scale = Vector2(2.194871, 2.0868168)
 script = ExtResource("5_r6ybo")
 metadata/_edit_group_ = true
@@ -445,62 +335,27 @@ texture = ExtResource("10_r6ybo")
 position = Vector2(0.9112091, 0.95839834)
 shape = SubResource("CircleShape2D_r6ybo")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(123, 59.5)
-scale = Vector2(0.2099567, 0.32517484)
-metadata/_edit_group_ = true
+[node name="WaterPillar" type="Sprite2D" parent="."]
+position = Vector2(276, 278)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_ag0fs")
 
-[node name="Block20251003232928" type="Sprite2D" parent="Area2D"]
-position = Vector2(19.051546, -1.5376343)
-scale = Vector2(1.0000001, 1)
-texture = ExtResource("36_7t2tf")
+[node name="WindPillar" type="Sprite2D" parent="."]
+position = Vector2(113, 277)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("33_g5heh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(7.144409, 1.5376587)
-scale = Vector2(1.0000002, 1)
-shape = SubResource("RectangleShape2D_koiu5")
+[node name="EarthPillar" type="Sprite2D" parent="."]
+position = Vector2(440, 278)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("34_i3xbm")
 
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(123, 59.5)
-scale = Vector2(0.2099567, 0.32517484)
-metadata/_edit_group_ = true
+[node name="FirePillar" type="Sprite2D" parent="."]
+position = Vector2(603, 278)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("35_7t2tf")
 
-[node name="Block20251003232928" type="Sprite2D" parent="Area2D2"]
-position = Vector2(795.40204, 1.5376358)
-scale = Vector2(1.0000001, 1)
-texture = ExtResource("36_7t2tf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(790.6392, 1.5376352)
-scale = Vector2(1.0000002, 1)
-shape = SubResource("RectangleShape2D_koiu5")
-
-[node name="Area2D3" type="Area2D" parent="."]
-position = Vector2(466.00003, 64)
-scale = Vector2(0.2099567, 0.32517484)
-metadata/_edit_group_ = true
-
-[node name="Block20251003232928" type="Sprite2D" parent="Area2D3"]
-position = Vector2(19.051546, -1.5376343)
-scale = Vector2(1.0000001, 1)
-texture = ExtResource("36_7t2tf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(7.144409, 1.5376587)
-scale = Vector2(1.0000002, 1)
-shape = SubResource("RectangleShape2D_koiu5")
-
-[node name="Area2D4" type="Area2D" parent="."]
-position = Vector2(635.00006, 63)
-scale = Vector2(0.2099567, 0.32517484)
-metadata/_edit_group_ = true
-
-[node name="Block20251003232928" type="Sprite2D" parent="Area2D4"]
-position = Vector2(19.051546, -1.5376343)
-scale = Vector2(1.0000001, 1)
-texture = ExtResource("36_7t2tf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2(7.144409, 1.5376587)
-scale = Vector2(1.0000002, 1)
-shape = SubResource("RectangleShape2D_koiu5")
+[node name="Block20251003232928" type="Sprite2D" parent="."]
+position = Vector2(182, -37)
+scale = Vector2(2.082251, 1)
+texture = ExtResource("36_koiu5")

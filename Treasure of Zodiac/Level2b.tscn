@@ -1,0 +1,415 @@
+[gd_scene load_steps=39 format=3 uid="uid://cp8npave025f2"]
+
+[ext_resource type="Texture2D" uid="uid://coaq12jcro4pt" path="res://lattice.png" id="1_lnxja"]
+[ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="2_k2y6t"]
+[ext_resource type="PackedScene" uid="uid://cj8cm51e2807c" path="res://scene_trigger.tscn" id="4_7wvyx"]
+[ext_resource type="Texture2D" uid="uid://diyjvj0o448fe" path="res://123.jpg" id="5_q3nlk"]
+[ext_resource type="Texture2D" uid="uid://ox3dvvv0qi5r" path="res://Aries.png" id="6_xx8pp"]
+[ext_resource type="Texture2D" uid="uid://byfebn147gaqy" path="res://pirate-face-emoji.png" id="7_5vsdf"]
+[ext_resource type="Script" uid="uid://db0rksyx15vd1" path="res://Aries_Area_2D.gd" id="7_jre6l"]
+[ext_resource type="Texture2D" uid="uid://ijmwpkil0mal" path="res://icon.svg" id="8_akixx"]
+[ext_resource type="Texture2D" uid="uid://hibuf4cdlqs4" path="res://Taurus .png" id="9_lckxg"]
+[ext_resource type="Script" uid="uid://cn8ado12b1glm" path="res://Taurus_Area_2D.gd" id="10_4bfjg"]
+[ext_resource type="Texture2D" uid="uid://b5vbcxieyj5ob" path="res://Gemini.png" id="11_gt3ro"]
+[ext_resource type="Script" uid="uid://vglkcb3c53wp" path="res://Gemini_Area_2D.gd" id="12_whrjf"]
+[ext_resource type="Texture2D" uid="uid://dbqq20oumc2ab" path="res://Cancer.png" id="13_nt34l"]
+[ext_resource type="Script" uid="uid://dl3oqt8nll3xo" path="res://AriesDrag.gd" id="14_iqm3a"]
+[ext_resource type="Script" uid="uid://c0t0esdb6rn64" path="res://Cancer_Area_2D.gd" id="15_f8sq6"]
+[ext_resource type="Texture2D" uid="uid://cf4u3w4h7ign5" path="res://Leo.png" id="16_72n7t"]
+[ext_resource type="Script" uid="uid://flamikhmm6ti" path="res://Leo_Area_2D.gd" id="17_nybrq"]
+[ext_resource type="Texture2D" uid="uid://cujnkuwkqj1d2" path="res://Virgo.png" id="18_xoadf"]
+[ext_resource type="Script" uid="uid://bm4m77ij08chj" path="res://Virgo_Area_2D.gd" id="19_2qj2x"]
+[ext_resource type="Texture2D" uid="uid://de14a5mfajj8o" path="res://Libra.png" id="20_hn1mg"]
+[ext_resource type="Script" uid="uid://cbd5w68gy8656" path="res://Libra_Area_2D.gd" id="21_pg4sd"]
+[ext_resource type="Texture2D" uid="uid://c7q7q3dl0v07y" path="res://Scorpio.png" id="22_p27ag"]
+[ext_resource type="Script" uid="uid://dgyf1wx30hn0u" path="res://Scorpio_Area_2D.gd" id="23_klwl5"]
+[ext_resource type="Texture2D" uid="uid://bvjjprghxh85i" path="res://Sagittarius.png" id="24_6uc2v"]
+[ext_resource type="Script" uid="uid://bf408nhg7qw2d" path="res://Sagittarius_Area_2D.gd" id="25_1gvqq"]
+[ext_resource type="Texture2D" uid="uid://br6k4hg6nw58n" path="res://Capricorn.png" id="26_q0tmd"]
+[ext_resource type="Script" uid="uid://db6cjgishxc41" path="res://Capricorn_Area_2D.gd" id="27_jemnv"]
+[ext_resource type="Texture2D" uid="uid://bvwd351q7prng" path="res://Aquarius.png" id="28_t7hry"]
+[ext_resource type="Script" uid="uid://d0ap5wrju101q" path="res://Aquarius_Area_2D.gd" id="29_5uhm1"]
+[ext_resource type="Texture2D" uid="uid://fdors1n1wqds" path="res://Pisces.png" id="30_fovp0"]
+[ext_resource type="Script" uid="uid://dbek7ai71d41u" path="res://Pisces_Area_2D.gd" id="31_tl8fp"]
+[ext_resource type="Texture2D" uid="uid://g02rvqe3esdm" path="res://WaterPillar.png" id="32_lgl30"]
+[ext_resource type="Texture2D" uid="uid://b7jydrrhjrxb7" path="res://WindPillar.png" id="33_85gwj"]
+[ext_resource type="Texture2D" uid="uid://dntfr3yq1ng4a" path="res://EarthPillar.png" id="34_mxkrb"]
+[ext_resource type="Texture2D" uid="uid://cv1ikss38cv8o" path="res://FirePillar.png" id="35_gss48"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fwyoe"]
+radius = 36.01388
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lcjo"]
+size = Vector2(74, 73)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6ybo"]
+radius = 28.24768
+
+[node name="Node" type="Node"]
+
+[node name="WaterPillar" type="Sprite2D" parent="."]
+position = Vector2(276, 278)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("32_lgl30")
+
+[node name="WindPillar" type="Sprite2D" parent="."]
+position = Vector2(113, 277)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("33_85gwj")
+
+[node name="FirePillar" type="Sprite2D" parent="."]
+position = Vector2(603, 278)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("35_gss48")
+
+[node name="EarthPillar" type="Sprite2D" parent="."]
+position = Vector2(439.99997, 278)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("34_mxkrb")
+
+[node name="Bag" type="Sprite2D" parent="."]
+position = Vector2(939, 326)
+scale = Vector2(2.194871, 2.0868168)
+texture = ExtResource("1_lnxja")
+
+[node name="Circle" type="CharacterBody2D" parent="."]
+position = Vector2(673, 606)
+scale = Vector2(1.0000001, 1)
+collision_layer = 2
+script = ExtResource("2_k2y6t")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="Circle"]
+position = Vector2(-0.50000167, 2.4999564)
+scale = Vector2(0.2709924, 0.27203047)
+texture = ExtResource("7_5vsdf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_fwyoe")
+
+[node name="SceneTrigger" parent="." instance=ExtResource("4_7wvyx")]
+position = Vector2(41, 604)
+connect_scene = "Ending"
+metadata/_edit_group_ = true
+
+[node name="WaterSymbol" type="Sprite2D" parent="SceneTrigger"]
+position = Vector2(4, -1)
+scale = Vector2(0.07333946, 0.07673744)
+texture = ExtResource("5_q3nlk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
+position = Vector2(4, -0.5)
+shape = SubResource("RectangleShape2D_4lcjo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(0, 49.182182)
+scale = Vector2(1, 0.92257917)
+build_mode = 1
+polygon = PackedVector2Array(0, 554, 725, 554, 725, 647, -0.99999994, 647.9748)
+
+[node name="Aries" type="Sprite2D" parent="."]
+position = Vector2(799, 82)
+scale = Vector2(0.15568188, 0.15248397)
+texture = ExtResource("6_xx8pp")
+
+[node name="AriesCoin" type="Area2D" parent="."]
+position = Vector2(797, 81)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("7_jre6l")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="AriesCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AriesCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Taurus" type="Sprite2D" parent="."]
+position = Vector2(798, 246.15625)
+scale = Vector2(0.15999998, 0.1567649)
+texture = ExtResource("9_lckxg")
+
+[node name="TaurusCoin" type="Area2D" parent="."]
+position = Vector2(798, 246)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("10_4bfjg")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="TaurusCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TaurusCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Gemini" type="Sprite2D" parent="."]
+position = Vector2(799.99994, 408)
+scale = Vector2(0.16842255, 0.16483863)
+texture = ExtResource("11_gt3ro")
+
+[node name="GeminiCoin" type="Area2D" parent="."]
+position = Vector2(796, 409)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("12_whrjf")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="GeminiCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GeminiCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Cancer" type="Sprite2D" parent="."]
+position = Vector2(800, 568)
+scale = Vector2(0.1575, 0.15000005)
+texture = ExtResource("13_nt34l")
+script = ExtResource("14_iqm3a")
+item_id = null
+
+[node name="CancerCoin" type="Area2D" parent="."]
+position = Vector2(802, 571)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("15_f8sq6")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="CancerCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CancerCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Leo" type="Sprite2D" parent="."]
+position = Vector2(940.5, 82.25)
+scale = Vector2(0.15549937, 0.14687501)
+texture = ExtResource("16_72n7t")
+
+[node name="LeoCoin" type="Area2D" parent="."]
+position = Vector2(939, 84)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("17_nybrq")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="LeoCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeoCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Virgo" type="Sprite2D" parent="."]
+position = Vector2(938.5, 247.50002)
+scale = Vector2(0.15883096, 0.15295632)
+texture = ExtResource("18_xoadf")
+
+[node name="VirgoCoin" type="Area2D" parent="."]
+position = Vector2(940, 246)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("19_2qj2x")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="VirgoCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VirgoCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Libra" type="Sprite2D" parent="."]
+position = Vector2(942, 408.49997)
+scale = Vector2(0.1598985, 0.15891467)
+texture = ExtResource("20_hn1mg")
+
+[node name="LibraCoin" type="Area2D" parent="."]
+position = Vector2(940, 408.00003)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("21_pg4sd")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="LibraCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LibraCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Scorpio" type="Sprite2D" parent="."]
+position = Vector2(941.99994, 567.99994)
+scale = Vector2(0.15842839, 0.15054691)
+texture = ExtResource("22_p27ag")
+
+[node name="ScorpioCoin" type="Area2D" parent="."]
+position = Vector2(941.00006, 569)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("23_klwl5")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="ScorpioCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScorpioCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Sagittarius" type="Sprite2D" parent="."]
+position = Vector2(1084, 84.125)
+scale = Vector2(0.16237117, 0.15764332)
+texture = ExtResource("24_6uc2v")
+
+[node name="SagittariusCoin" type="Area2D" parent="."]
+position = Vector2(1082, 84)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("25_1gvqq")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="SagittariusCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SagittariusCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Capricorn" type="Sprite2D" parent="."]
+position = Vector2(1086, 246.1875)
+scale = Vector2(0.15917853, 0.15493633)
+texture = ExtResource("26_q0tmd")
+
+[node name="CapricornCoin" type="Area2D" parent="."]
+position = Vector2(1083, 246)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("27_jemnv")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="CapricornCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CapricornCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Aquarius" type="Sprite2D" parent="."]
+position = Vector2(1086.5, 407)
+scale = Vector2(0.17007664, 0.15958817)
+texture = ExtResource("28_t7hry")
+
+[node name="AquariusCoin" type="Area2D" parent="."]
+position = Vector2(1082, 409)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("29_5uhm1")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="AquariusCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AquariusCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Pisces" type="Sprite2D" parent="."]
+position = Vector2(1085, 569.93756)
+scale = Vector2(0.17503212, 0.16337429)
+texture = ExtResource("30_fovp0")
+
+[node name="PiscesCoin" type="Area2D" parent="."]
+position = Vector2(1082, 569)
+scale = Vector2(2.194871, 2.0868168)
+script = ExtResource("31_tl8fp")
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="PiscesCoin"]
+position = Vector2(0.45561218, 0)
+scale = Vector2(0.45560765, 0.47919875)
+texture = ExtResource("8_akixx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PiscesCoin"]
+position = Vector2(0.9112091, 0.95839834)
+shape = SubResource("CircleShape2D_r6ybo")
+
+[node name="Aries2" type="Sprite2D" parent="."]
+position = Vector2(604, 184)
+scale = Vector2(0.05, 0.054)
+texture = ExtResource("6_xx8pp")
+
+[node name="Taurus2" type="Sprite2D" parent="."]
+position = Vector2(441, 182)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("9_lckxg")
+
+[node name="Gemini2" type="Sprite2D" parent="."]
+position = Vector2(115, 181)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_gt3ro")
+
+[node name="Cancer2" type="Sprite2D" parent="."]
+position = Vector2(277, 183)
+scale = Vector2(0.049999997, 0.049999997)
+texture = ExtResource("13_nt34l")
+
+[node name="Leo2" type="Sprite2D" parent="."]
+position = Vector2(604, 231)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("16_72n7t")
+
+[node name="Scorpio2" type="Sprite2D" parent="."]
+position = Vector2(278.00003, 231)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("22_p27ag")
+
+[node name="Sagittarius2" type="Sprite2D" parent="."]
+position = Vector2(604, 282)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("24_6uc2v")
+
+[node name="Aquarius2" type="Sprite2D" parent="."]
+position = Vector2(115, 280)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("28_t7hry")
+
+[node name="Capricorn2" type="Sprite2D" parent="."]
+position = Vector2(442, 282)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("26_q0tmd")
+
+[node name="Libra2" type="Sprite2D" parent="."]
+position = Vector2(115.000015, 231)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("20_hn1mg")
+
+[node name="Pisces2" type="Sprite2D" parent="."]
+position = Vector2(277, 282)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("30_fovp0")
+
+[node name="Virgo2" type="Sprite2D" parent="."]
+position = Vector2(441, 232)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("18_xoadf")

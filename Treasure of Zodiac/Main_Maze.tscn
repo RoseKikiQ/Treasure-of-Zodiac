@@ -1,8 +1,10 @@
-[gd_scene load_steps=57 format=3 uid="uid://dx5ty6majsqjk"]
+[gd_scene load_steps=59 format=3 uid="uid://dx5ty6majsqjk"]
 
-[ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="1_51mie"]
 [ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="1_bacrs"]
+[ext_resource type="Texture2D" uid="uid://byfebn147gaqy" path="res://pirate-face-emoji.png" id="3_fpquj"]
 [ext_resource type="Texture2D" uid="uid://big2schte2lsp" path="res://MainMaze3.png" id="3_tf60k"]
+[ext_resource type="Texture2D" uid="uid://dufw3kgg1sp5y" path="res://321.jpg" id="5_fpquj"]
+[ext_resource type="Script" uid="uid://dlilt2qe5w5id" path="res://SceneTriggerEnding.gd" id="6_fpquj"]
 [ext_resource type="Script" uid="uid://cc3ys6opkgc5c" path="res://AriesKey.gd" id="8_p4uu3"]
 [ext_resource type="Texture2D" uid="uid://hibuf4cdlqs4" path="res://Taurus .png" id="9_lwmap"]
 [ext_resource type="Texture2D" uid="uid://cujnkuwkqj1d2" path="res://Virgo.png" id="10_p4uu3"]
@@ -37,7 +39,6 @@
 [ext_resource type="Script" uid="uid://0rj8pa07uxqt" path="res://CapricornKey.gd" id="36_v61u6"]
 [ext_resource type="Script" uid="uid://db6cjgishxc41" path="res://Capricorn_Area_2D.gd" id="38_atf5v"]
 [ext_resource type="Script" uid="uid://cridjx7uhsbnh" path="res://AquariusKey.gd" id="39_0qerk"]
-[ext_resource type="Texture2D" uid="uid://dufw3kgg1sp5y" path="res://321.jpg" id="41_2d0sk"]
 [ext_resource type="Script" uid="uid://d0ap5wrju101q" path="res://Aquarius_Area_2D.gd" id="41_ugf0n"]
 [ext_resource type="Script" uid="uid://bk78vwy5u4hua" path="res://PiscesKey.gd" id="42_ig5ji"]
 [ext_resource type="Script" uid="uid://dbek7ai71d41u" path="res://Pisces_Area_2D.gd" id="44_xvt0k"]
@@ -47,8 +48,11 @@ radius = 16.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tf60k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2d0sk"]
-size = Vector2(149, 181.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5uci"]
+size = Vector2(80, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v61u6"]
+size = Vector2(108, 96)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ruus"]
 radius = 393.75
@@ -95,16 +99,16 @@ scale = Vector2(1.0743182, 1.0847999)
 texture = ExtResource("3_tf60k")
 
 [node name="Circle" type="CharacterBody2D" parent="."]
-position = Vector2(1027, 291)
+position = Vector2(564, 297)
 scale = Vector2(1.0000001, 1)
 collision_layer = 2
 script = ExtResource("1_bacrs")
 metadata/_edit_group_ = true
 
 [node name="Icon" type="Sprite2D" parent="Circle"]
-position = Vector2(0, 1)
-scale = Vector2(0.31402102, 0.33369434)
-texture = ExtResource("1_51mie")
+position = Vector2(-2.7656555e-05, 2.8014183e-06)
+scale = Vector2(0.122137405, 0.12260537)
+texture = ExtResource("3_fpquj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
 shape = SubResource("CircleShape2D_tf60k")
@@ -121,7 +125,7 @@ physics_material_override = SubResource("PhysicsMaterial_tf60k")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 position = Vector2(1, 0)
 build_mode = 1
-polygon = PackedVector2Array(10, 8, 276, 8, 278, 10, 278, 162, 288, 162, 288, 11, 291, 8, 400, 8, 401, 74, 410, 74, 410, 8, 585, 8, 585, 30, 595, 30, 595, 8, 710, 8, 710, 31, 718, 31, 718, 8, 862, 8, 862, 30, 872, 30, 871, 8, 986, 8, 986, 52, 995, 52, 995, 8, 1140, 8, 1140, 134, 1108, 134, 1108, 140, 1140, 140, 1139, 222, 1110, 222, 1110, 229, 1139, 229, 1139, 310, 1109, 310, 1109, 317, 1139, 317, 1140, 354, 1109, 354, 1110, 360, 1140, 360, 1140, 640, 749, 640, 750, 553, 739, 553, 740, 640, 626, 640, 626, 554, 617, 554, 617, 640, 503, 640, 503, 471, 656, 471, 656, 464, 300, 464, 300, 471, 371, 471, 371, 491, 380, 491, 380, 471, 493, 471, 493, 640, 379, 640, 379, 581, 433, 581, 433, 603, 441, 603, 441, 509, 433, 509, 433, 531, 318, 531, 318, 509, 63, 509, 63, 603, 72, 603, 72, 515, 186, 515, 186, 604, 196, 604, 196, 515, 310, 515, 310, 602, 318, 602, 318, 537, 433, 537, 433, 574, 371, 574, 371, 640, 257, 640, 257, 551, 248, 551, 248, 640, 134, 640, 134, 551, 125, 551, 126, 640, 11, 641, 10, 426, 132, 426, 132, 420, 11, 419.62238, 10, 252, 155, 250, 155, 294, 163, 294, 164, 206, 256, 206, 256, 200, 195, 200, 195, 163, 225, 163, 225, 45, 62, 45, 62, 74, 71, 74, 71, 52, 217, 52, 217, 156, 185, 156, 185, 200, 133, 200, 133, 118, 163, 118, 163, 90, 156, 90, 156, 112, 125, 112, 125, 206, 155, 206, 155, 244, 10, 244, 10, 118, 62, 118, 62, 206, 71, 206, 71, 112, 10, 112)
+polygon = PackedVector2Array(11, 8, 277, 8, 279, 10, 279, 162, 289, 162, 289, 11, 292, 8, 401, 8, 402, 74, 411, 74, 411, 8, 586, 8, 586, 30, 596, 30, 596, 8, 711, 8, 711, 31, 719, 31, 719, 8, 863, 8, 863, 30, 873, 30, 872, 8, 987, 8, 987, 52, 996, 52, 996, 8, 1141, 8, 1141, 134, 1109, 134, 1109, 140, 1141, 140, 1140, 222, 1111, 222, 1111, 229, 1140, 229, 1140, 310, 1110, 310, 1110, 317, 1140, 317, 1141, 354, 1110, 354, 1111, 360, 1141, 360, 1141, 640, 750, 640, 751, 553, 740, 553, 741, 640, 627, 640, 627, 554, 618, 554, 618, 640, 504, 640, 504, 471, 657, 471, 657, 464, 301, 464, 301, 471, 372, 471, 372, 491, 381, 491, 381, 471, 494, 471, 494, 640, 380, 640, 380, 581, 434, 581, 434, 603, 442, 603, 442, 509, 434, 509, 434, 531, 319, 531, 319, 509, 64, 509, 64, 603, 73, 603, 73, 515, 187, 515, 187, 604, 197, 604, 197, 515, 311, 515, 311, 602, 319, 602, 319, 537, 434, 537, 434, 574, 372, 574, 372, 640, 258, 640, 258, 551, 249, 551, 249, 640, 135, 640, 135, 551, 126, 551, 127, 640, 12, 641, 11, 426, 133, 426, 133, 420, 12, 419.62238, 11, 252, 156, 250, 156, 294, 164, 294, 165, 206, 257, 206, 257, 200, 196, 200, 196, 163, 226, 163, 226, 45, 63, 45, 63, 74, 72, 74, 72, 52, 218, 52, 218, 156, 186, 156, 186, 200, 134, 200, 134, 118, 164, 118, 164, 90, 157, 90, 157, 112, 126, 112, 126, 206, 156, 206, 156, 244, 11, 244, 11, 118, 63, 118, 63, 206, 72, 206, 72, 112, 11, 112)
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
@@ -137,21 +141,32 @@ build_mode = 1
 polygon = PackedVector2Array(320, 287, 320, 419, 834, 419, 833, 288, 841, 288, 841, 309, 996, 309, 996, 360, 987, 360, 987, 317, 841, 317, 841, 419, 896, 419, 896, 398, 926, 398, 926, 360, 896, 360, 896, 353, 933, 353, 933, 398, 1049, 398, 1049, 272, 895, 272, 895, 266, 1048, 266, 1048, 185, 987, 185, 987, 178, 1048, 178, 1048, 96, 873, 96, 873, 183, 864, 183, 864, 74, 771, 74, 771, 68, 803, 68, 803, 47, 810, 47, 810, 68, 873, 68, 873, 89, 926, 89, 926, 46, 933, 46, 933, 89, 1079, 89, 1079, 52, 1049, 52, 1049, 45, 1088, 45, 1088, 96, 1056, 96, 1056, 178, 1088, 178, 1088, 185, 1056, 185, 1056, 266, 1087, 266, 1087, 272, 1056, 272, 1056, 398, 1088, 398, 1088, 426, 1080, 426, 1080, 404, 963, 404, 963, 508, 1026, 508, 1026, 558, 1017, 558, 1017, 514, 956, 514, 956, 404, 903, 404, 903, 426, 719, 426, 719, 509, 841, 509, 841, 515, 811, 515, 811, 596, 956, 596, 956, 558, 865, 558, 865, 552, 896, 552, 896, 470, 773, 470, 773, 464, 903, 464, 903, 552, 964, 552, 964, 596, 1080, 596, 1080, 470, 1018, 470, 1018, 442, 1025, 442, 1025, 463, 1088, 463, 1088, 602, 803, 602, 803, 515, 688, 515, 688, 602, 679, 602, 679, 515, 566, 515, 566, 602, 557, 602, 557, 509, 710, 509, 710, 426, 310, 426, 310, 287)
 
 [node name="SceneTrigger2" parent="." instance=ExtResource("26_df0i0")]
-position = Vector2(570, 320)
+position = Vector2(561, 373)
 connect_scene = "Water"
 metadata/_edit_group_ = true
 
-[node name="321" type="Sprite2D" parent="SceneTrigger2"]
-position = Vector2(4, 1)
-scale = Vector2(0.27608475, 0.39933154)
-texture = ExtResource("41_2d0sk")
+[node name="WaterSymbol" type="Sprite2D" parent="SceneTrigger2"]
+position = Vector2(1, 1.9999962)
+scale = Vector2(0.18178491, 0.19664605)
+texture = ExtResource("5_fpquj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger2"]
-position = Vector2(3, 3)
-shape = SubResource("RectangleShape2D_2d0sk")
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_v5uci")
+metadata/_edit_group_ = true
+
+[node name="SceneTrigger" parent="." instance=ExtResource("26_df0i0")]
+position = Vector2(562, 375)
+script = ExtResource("6_fpquj")
+required_coins = ["KeyA1", "KeyA2", "KeyA3", "KeyB1", "KeyB2", "KeyB3", "KeyC1", "KeyC2", "KeyC3", "KeyD1", "KeyD2", "KeyD3"]
+connect_scene = "Level2b"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_v61u6")
 
 [node name="AriesKey" type="Area2D" parent="."]
-position = Vector2(868, 292)
+position = Vector2(800, 390)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -168,7 +183,7 @@ shape = SubResource("CapsuleShape2D_4ruus")
 script = ExtResource("12_o5oht")
 
 [node name="TaurusKey" type="Area2D" parent="."]
-position = Vector2(811, 404)
+position = Vector2(416, 386)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -186,7 +201,7 @@ shape = SubResource("CircleShape2D_ixgtn")
 script = ExtResource("15_kvc7b")
 
 [node name="GeminiKey" type="Area2D" parent="."]
-position = Vector2(471, 243.99998)
+position = Vector2(684, 257)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -204,7 +219,7 @@ shape = SubResource("CircleShape2D_r1gar")
 script = ExtResource("18_cvt5i")
 
 [node name="CancerKey" type="Area2D" parent="."]
-position = Vector2(809, 244)
+position = Vector2(793, 315)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -222,7 +237,7 @@ shape = SubResource("CircleShape2D_xvt0k")
 script = ExtResource("21_eo2j4")
 
 [node name="LeoKey" type="Area2D" parent="."]
-position = Vector2(337, 249)
+position = Vector2(416, 252)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -239,7 +254,7 @@ shape = SubResource("CircleShape2D_rjlbr")
 script = ExtResource("24_fpquj")
 
 [node name="VirgoKey" type="Area2D" parent="."]
-position = Vector2(864, 246)
+position = Vector2(808, 256)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -257,7 +272,7 @@ shape = SubResource("CircleShape2D_47c3n")
 script = ExtResource("27_v61u6")
 
 [node name="LibraKey" type="Area2D" parent="."]
-position = Vector2(668, 399)
+position = Vector2(388, 298)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -274,7 +289,7 @@ shape = SubResource("CircleShape2D_m3u5k")
 script = ExtResource("20_5ynfy")
 
 [node name="ScorpioKey" type="Area2D" parent="."]
-position = Vector2(404, 322)
+position = Vector2(405, 354)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -292,7 +307,7 @@ shape = SubResource("CircleShape2D_xwwoy")
 script = ExtResource("33_0qerk")
 
 [node name="SageittariusKey" type="Area2D" parent="."]
-position = Vector2(475, 401)
+position = Vector2(347, 356)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -309,7 +324,7 @@ shape = SubResource("CircleShape2D_vdxjj")
 script = ExtResource("36_ig5ji")
 
 [node name="CapricornKey" type="Area2D" parent="."]
-position = Vector2(665, 246)
+position = Vector2(706, 342)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -326,7 +341,7 @@ shape = SubResource("CircleShape2D_jb0ow")
 script = ExtResource("38_atf5v")
 
 [node name="AquariusKey" type="Area2D" parent="."]
-position = Vector2(737, 322)
+position = Vector2(744, 308)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -344,7 +359,7 @@ shape = SubResource("CircleShape2D_biqrs")
 script = ExtResource("41_ugf0n")
 
 [node name="PiscesKey" type="Area2D" parent="."]
-position = Vector2(343, 404)
+position = Vector2(565, 245)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -355,7 +370,6 @@ metadata/_edit_group_ = true
 texture = ExtResource("20_cvt5i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PiscesKey"]
-position = Vector2(-3.5430908, 0.0011444092)
 shape = SubResource("CircleShape2D_qmsg8")
 
 [node name="Piscescode" type="Area2D" parent="."]
