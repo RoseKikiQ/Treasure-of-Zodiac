@@ -166,7 +166,7 @@ position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_v61u6")
 
 [node name="AriesKey" type="Area2D" parent="."]
-position = Vector2(800, 390)
+position = Vector2(909, 379)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -183,7 +183,7 @@ shape = SubResource("CapsuleShape2D_4ruus")
 script = ExtResource("12_o5oht")
 
 [node name="TaurusKey" type="Area2D" parent="."]
-position = Vector2(416, 386)
+position = Vector2(407, 556)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -201,7 +201,7 @@ shape = SubResource("CircleShape2D_ixgtn")
 script = ExtResource("15_kvc7b")
 
 [node name="GeminiKey" type="Area2D" parent="."]
-position = Vector2(684, 257)
+position = Vector2(1054, 66)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -219,7 +219,7 @@ shape = SubResource("CircleShape2D_r1gar")
 script = ExtResource("18_cvt5i")
 
 [node name="CancerKey" type="Area2D" parent="."]
-position = Vector2(793, 315)
+position = Vector2(933, 578)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -237,7 +237,7 @@ shape = SubResource("CircleShape2D_xvt0k")
 script = ExtResource("21_eo2j4")
 
 [node name="LeoKey" type="Area2D" parent="."]
-position = Vector2(416, 252)
+position = Vector2(41, 144)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -254,7 +254,7 @@ shape = SubResource("CircleShape2D_rjlbr")
 script = ExtResource("24_fpquj")
 
 [node name="VirgoKey" type="Area2D" parent="."]
-position = Vector2(808, 256)
+position = Vector2(161, 357)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -272,7 +272,7 @@ shape = SubResource("CircleShape2D_47c3n")
 script = ExtResource("27_v61u6")
 
 [node name="LibraKey" type="Area2D" parent="."]
-position = Vector2(388, 298)
+position = Vector2(156, 178)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -289,7 +289,7 @@ shape = SubResource("CircleShape2D_m3u5k")
 script = ExtResource("20_5ynfy")
 
 [node name="ScorpioKey" type="Area2D" parent="."]
-position = Vector2(405, 354)
+position = Vector2(496, 74)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -307,7 +307,7 @@ shape = SubResource("CircleShape2D_xwwoy")
 script = ExtResource("33_0qerk")
 
 [node name="SageittariusKey" type="Area2D" parent="."]
-position = Vector2(347, 356)
+position = Vector2(29, 623)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -324,7 +324,7 @@ shape = SubResource("CircleShape2D_vdxjj")
 script = ExtResource("36_ig5ji")
 
 [node name="CapricornKey" type="Area2D" parent="."]
-position = Vector2(706, 342)
+position = Vector2(1123, 332)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -341,7 +341,7 @@ shape = SubResource("CircleShape2D_jb0ow")
 script = ExtResource("38_atf5v")
 
 [node name="AquariusKey" type="Area2D" parent="."]
-position = Vector2(744, 308)
+position = Vector2(221, 444)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
@@ -359,7 +359,7 @@ shape = SubResource("CircleShape2D_biqrs")
 script = ExtResource("41_ugf0n")
 
 [node name="PiscesKey" type="Area2D" parent="."]
-position = Vector2(565, 245)
+position = Vector2(652, 200)
 scale = Vector2(0.04, 0.04)
 collision_layer = 0
 collision_mask = 2
