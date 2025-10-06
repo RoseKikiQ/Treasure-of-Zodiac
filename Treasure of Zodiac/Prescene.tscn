@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="1_54g15"]
 [ext_resource type="Texture2D" uid="uid://du1mn36onl7sp" path="res://Treasure hunt.jpg" id="1_ffphx"]
 [ext_resource type="Script" uid="uid://6smflucpid0d" path="res://button.gd" id="1_w1jhh"]
-[ext_resource type="Texture2D" uid="uid://byfebn147gaqy" path="res://pirate-face-emoji.png" id="4_ffphx"]
+[ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="4_ffphx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ffphx"]
 radius = 44.28318
@@ -24,13 +24,13 @@ text = "Press To Start the Treasure Hunt"
 script = ExtResource("1_w1jhh")
 
 [node name="Circle" type="CharacterBody2D" parent="."]
-position = Vector2(955, 503)
+position = Vector2(959, 506)
 script = ExtResource("1_54g15")
 metadata/_edit_group_ = true
 
 [node name="Icon" type="Sprite2D" parent="Circle"]
-position = Vector2(1.9073486e-05, -1.1920929e-07)
-scale = Vector2(0.31402102, 0.33369434)
+position = Vector2(1.49997, 0.9999995)
+scale = Vector2(0.91150373, 0.9702974)
 texture = ExtResource("4_ffphx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]

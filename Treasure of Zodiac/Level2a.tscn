@@ -1,7 +1,7 @@
 [gd_scene load_steps=40 format=3 uid="uid://ct7hyiq5ugk88"]
 
+[ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="2_fm5p6"]
 [ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="2_w8oig"]
-[ext_resource type="Texture2D" uid="uid://byfebn147gaqy" path="res://pirate-face-emoji.png" id="3_fm5p6"]
 [ext_resource type="Texture2D" uid="uid://coaq12jcro4pt" path="res://lattice.png" id="4_qsqs7"]
 [ext_resource type="Texture2D" uid="uid://diyjvj0o448fe" path="res://123.jpg" id="5_1feth"]
 [ext_resource type="Texture2D" uid="uid://ox3dvvv0qi5r" path="res://Aries.png" id="5_fwyoe"]
@@ -37,8 +37,8 @@
 [ext_resource type="Texture2D" uid="uid://cv1ikss38cv8o" path="res://FirePillar.png" id="35_7t2tf"]
 [ext_resource type="Texture2D" uid="uid://bb77govj6murq" path="res://Block 2025-10-03 232928.png" id="36_koiu5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fwyoe"]
-radius = 36.01388
+[sub_resource type="CircleShape2D" id="CircleShape2D_fm5p6"]
+radius = 39.45884
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lcjo"]
 size = Vector2(74, 73)
@@ -48,26 +48,23 @@ radius = 28.24768
 
 [node name="Node" type="Node"]
 
+[node name="Circle" type="CharacterBody2D" parent="."]
+position = Vector2(659, 604)
+script = ExtResource("2_w8oig")
+metadata/_edit_group_ = true
+
+[node name="Circle" type="Sprite2D" parent="Circle"]
+position = Vector2(0.99998164, 0.9999964)
+scale = Vector2(0.8318583, 0.8712871)
+texture = ExtResource("2_fm5p6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
+shape = SubResource("CircleShape2D_fm5p6")
+
 [node name="Bag" type="Sprite2D" parent="."]
 position = Vector2(939, 326)
 scale = Vector2(2.194871, 2.0868168)
 texture = ExtResource("4_qsqs7")
-
-[node name="Circle" type="CharacterBody2D" parent="."]
-position = Vector2(673, 606)
-scale = Vector2(1.0000001, 1)
-collision_layer = 2
-script = ExtResource("2_w8oig")
-metadata/_edit_group_ = true
-
-[node name="Icon" type="Sprite2D" parent="Circle"]
-position = Vector2(-0.49999058, 2.0000126)
-scale = Vector2(0.26335865, 0.26819918)
-texture = ExtResource("3_fm5p6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
-position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_fwyoe")
 
 [node name="SceneTrigger" parent="." instance=ExtResource("7_3ajnt")]
 position = Vector2(41, 604)

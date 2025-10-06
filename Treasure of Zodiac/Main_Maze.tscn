@@ -1,7 +1,7 @@
 [gd_scene load_steps=59 format=3 uid="uid://dx5ty6majsqjk"]
 
 [ext_resource type="Script" uid="uid://0mdyd1k4oyhk" path="res://Circle.gd" id="1_bacrs"]
-[ext_resource type="Texture2D" uid="uid://byfebn147gaqy" path="res://pirate-face-emoji.png" id="3_fpquj"]
+[ext_resource type="Texture2D" uid="uid://dmmci8sqbl8gy" path="res://Circle.png" id="3_fpquj"]
 [ext_resource type="Texture2D" uid="uid://big2schte2lsp" path="res://MainMaze3.png" id="3_tf60k"]
 [ext_resource type="Texture2D" uid="uid://dufw3kgg1sp5y" path="res://321.jpg" id="5_fpquj"]
 [ext_resource type="Script" uid="uid://dlilt2qe5w5id" path="res://SceneTriggerEnding.gd" id="6_fpquj"]
@@ -99,15 +99,15 @@ scale = Vector2(1.0743182, 1.0847999)
 texture = ExtResource("3_tf60k")
 
 [node name="Circle" type="CharacterBody2D" parent="."]
-position = Vector2(564, 297)
+position = Vector2(564, 296)
 scale = Vector2(1.0000001, 1)
 collision_layer = 2
 script = ExtResource("1_bacrs")
 metadata/_edit_group_ = true
 
 [node name="Icon" type="Sprite2D" parent="Circle"]
-position = Vector2(-2.7656555e-05, 2.8014183e-06)
-scale = Vector2(0.122137405, 0.12260537)
+position = Vector2(0.5000304, 0.4999981)
+scale = Vector2(0.32743338, 0.34653458)
 texture = ExtResource("3_fpquj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
@@ -123,7 +123,7 @@ collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_tf60k")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-position = Vector2(1, 0)
+position = Vector2(1, -1)
 build_mode = 1
 polygon = PackedVector2Array(11, 8, 277, 8, 279, 10, 279, 162, 289, 162, 289, 11, 292, 8, 401, 8, 402, 74, 411, 74, 411, 8, 586, 8, 586, 30, 596, 30, 596, 8, 711, 8, 711, 31, 719, 31, 719, 8, 863, 8, 863, 30, 873, 30, 872, 8, 987, 8, 987, 52, 996, 52, 996, 8, 1141, 8, 1141, 134, 1109, 134, 1109, 140, 1141, 140, 1140, 222, 1111, 222, 1111, 229, 1140, 229, 1140, 310, 1110, 310, 1110, 317, 1140, 317, 1141, 354, 1110, 354, 1111, 360, 1141, 360, 1141, 640, 750, 640, 751, 553, 740, 553, 741, 640, 627, 640, 627, 554, 618, 554, 618, 640, 504, 640, 504, 471, 657, 471, 657, 464, 301, 464, 301, 471, 372, 471, 372, 491, 381, 491, 381, 471, 494, 471, 494, 640, 380, 640, 380, 581, 434, 581, 434, 603, 442, 603, 442, 509, 434, 509, 434, 531, 319, 531, 319, 509, 64, 509, 64, 603, 73, 603, 73, 515, 187, 515, 187, 604, 197, 604, 197, 515, 311, 515, 311, 602, 319, 602, 319, 537, 434, 537, 434, 574, 372, 574, 372, 640, 258, 640, 258, 551, 249, 551, 249, 640, 135, 640, 135, 551, 126, 551, 127, 640, 12, 641, 11, 426, 133, 426, 133, 420, 12, 419.62238, 11, 252, 156, 250, 156, 294, 164, 294, 165, 206, 257, 206, 257, 200, 196, 200, 196, 163, 226, 163, 226, 45, 63, 45, 63, 74, 72, 74, 72, 52, 218, 52, 218, 156, 186, 156, 186, 200, 134, 200, 134, 118, 164, 118, 164, 90, 157, 90, 157, 112, 126, 112, 126, 206, 156, 206, 156, 244, 11, 244, 11, 118, 63, 118, 63, 206, 72, 206, 72, 112, 11, 112)
 
