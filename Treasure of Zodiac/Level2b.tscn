@@ -47,11 +47,6 @@ radius = 28.24768
 
 [node name="Node" type="Node"]
 
-[node name="Bag" type="Sprite2D" parent="."]
-position = Vector2(939, 326)
-scale = Vector2(2.194871, 2.0868168)
-texture = ExtResource("1_lnxja")
-
 [node name="WaterPillar" type="Sprite2D" parent="."]
 position = Vector2(276, 278)
 scale = Vector2(0.25, 0.25)
@@ -71,6 +66,11 @@ texture = ExtResource("35_gss48")
 position = Vector2(439.99997, 278)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("34_mxkrb")
+
+[node name="Bag" type="Sprite2D" parent="."]
+position = Vector2(939, 326)
+scale = Vector2(2.194871, 2.0868168)
+texture = ExtResource("1_lnxja")
 
 [node name="Circle" type="CharacterBody2D" parent="."]
 position = Vector2(673, 606)
