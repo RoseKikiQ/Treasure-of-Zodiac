@@ -1,3 +1,7 @@
+Theme:
+
+Coins!
+
 Overview:
 
 Treasure of Zodiac is a puzzle game where the player explores a maze to collect coins and unlock a hidden treasure.
