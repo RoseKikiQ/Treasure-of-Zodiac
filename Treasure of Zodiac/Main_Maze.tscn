@@ -118,8 +118,6 @@ show_behind_parent = true
 top_level = true
 light_mask = 2
 visibility_layer = 2
-collision_layer = 3
-collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_tf60k")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
